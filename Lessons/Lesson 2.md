@@ -1,8 +1,8 @@
 # 08/24/21: Variables and Types
 
-- Java executed code line by line
-- Type of variable must be included in variable declaration
-- Type should not be included when changing value of already declared variable, since this indicated declaration
+- Java executes code line by line
+- The variable type must be included in variable declaration
+- Variable type should not be included when changing value of already declared variable, since this indicates declaration
 - The value of a variable is called a literal
 
 ``` java 
