@@ -1,6 +1,8 @@
 # 08/25/21 Operations on Variables
 
 ## Comments in Java
+| code | what it does |
+| ---- | ------------ |
 | // | Single line comment |
 | /* text */ | Multi line comment |
 
@@ -28,6 +30,8 @@ System.out.println(i); // prints 7
 ```
 
 ## Operators 
+| operator | what it does |
+| -------- | ------------ |
 | + | Addition |
 | - | Subtraction |
 | * | Multiplication |
