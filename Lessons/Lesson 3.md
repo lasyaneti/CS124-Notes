@@ -46,7 +46,7 @@ System.out.println(i); // prints 7
 | == | Equality (see Note A) |
 | != | Not equal to aka BANG equals |
 | && | and (see Note B) |
-| \|| | or (see Note B) |
+| \|\| | or (see Note B) |
 
 - **Note A**
     - Single equals (=) is used for assignment, i.e. it assigns value to variable
