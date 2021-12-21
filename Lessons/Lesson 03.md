@@ -37,12 +37,9 @@ System.out.println(i); // prints 7
 | * | Multiplication |
 | / | Division (truncates answer during int division) |
 | % | Modulo (returns remainder from division) |
-| = | Assignment (see Note A) |
+| = | Assignment (assigns value to variable) |
 | ! | Binary negation aka BANG (switches the boolean) |
 
-- **Note A**
-    - Single equals (=) is used for assignment, i.e. it assigns value to variable
-    - Double equals (==) is used to check equality. In primitive types, it compares the value of the variable. In objects, it compares the reference or address of the object.
 ``` java
 int x = 1;
 int y = 1;

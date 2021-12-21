@@ -8,8 +8,11 @@
 | < | Less than |
 | >= | Greater than or equal to |
 | <= | Less than or equal to |
-| == | Equality (see Note A) |
+| == | Equality (see note) |
 | != | Not equal to aka BANG equals |
+
+- **Note**
+    - Double equals (==) is used to check equality. In primitive types, it compares the value of the variable. In objects, it compares the reference or address of the object.
 
 ## If and If Else
 - If statements are evaluated if the condition is true
