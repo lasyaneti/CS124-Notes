@@ -43,7 +43,7 @@ int i = 0;
 boolean i = false; // error here
 ```
 
-## Enhanced Foor Loop
+## Enhanced For Loop
 - Alternative for loop that doesn't use index 
 - Datatype of variable created for the enhanced for loop must match the variable of the data structure you are traversing 
 ```java
