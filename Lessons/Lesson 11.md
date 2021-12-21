@@ -6,8 +6,8 @@
 
 ## Method Overloading 
 - There can be multiple functions with the same function name BUT:
-  - Parameters must be different 
-  - Method signature (includes name and parameters) must be different, i.e. just changing the return type or parameter variable name will not work;
+  - Arguements must be different 
+  - Method signature (includes name and arguement) must be different, i.e. just changing the return type or arguement variable name will not work;
 - Useful to perform same function with different inputs 
 
 ```java
@@ -16,11 +16,15 @@ void printThis(int num) {
     System.out.println(num);
 }
 
+void printThis(String str) {
+    System.out.println(str);
+}
+
 void printThis(int a, int b) {
     System.out.println(a + " and " + b);
 }
 
-// WRONG because method signature is still the same, the only change made was the parameter variable name
+// WRONG because method signature is still the same, the only change made was the arguement variable name
 void printThis(int val) {
     System.out.println(val);
 }

@@ -3,10 +3,10 @@
 ## Errors 
 - **Checkstyle errors** are caused by incorrect code formatting
     - Ex: missing space after if keyword, incorrect indentation, unused import statements, etc.
-- **Compiler errors** are caused because:
-    1. Java doesn't understand what you are trying to do
-    2. Java understands what you want to do but has noticed a potential problem 
-- **Runtime errors** are errors that are not caught by the compiler but is brought up at runtime 
+- **Compiler errors** can be caused for the following reasons:
+    - Java doesn't understand what you are trying to do
+    - Java understands what you want to do but has noticed a potential problem 
+- **Runtime errors** are errors that are not caught by the compiler but are brought up at runtime 
 
 ## Assert
 - Use the assert keyword to debug 

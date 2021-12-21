@@ -5,8 +5,8 @@
 - Functions should be written for repetitive code
   - Note: this makes the code reuseable and easier to read/work with, BUT the actual speed of the code remains the same.
 - Functions must specify
-  1. Return type (stuff that is returned must match this)
-  2. Datatype if parameters accepted
+  - Return type (stuff that is returned must match this)
+  - Datatype if parameters accepted
 
 ```java
 int addition(int a, int b) {
