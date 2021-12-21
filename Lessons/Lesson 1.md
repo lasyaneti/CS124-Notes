@@ -1,4 +1,4 @@
-# 08/23/21 Welcome
+# 08/23/21: Welcome
 
 Printing in Java:
 ``` java
