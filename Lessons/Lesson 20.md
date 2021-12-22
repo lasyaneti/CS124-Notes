@@ -1,4 +1,4 @@
-# 09/20/21 Introduction to Objects 
+# 09/20/21: Introduction to Objects 
 
 - Class = blueprint for Object, it defines how a group of objects behave
   - Methods define what the object can do 

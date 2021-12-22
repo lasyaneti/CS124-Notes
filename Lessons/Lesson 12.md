@@ -17,8 +17,7 @@
 | \\t | Tab with 8 Spaces |
 
 ```java
-String example = "this is a single quote: \' --> it works.";
-System.out.println(example);
+String example = "this is a single quote: \" it works.";
 ```
 
 ## String Concatenation
