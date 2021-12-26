@@ -1,12 +1,12 @@
 # 09/08/21: Strings 
 
-- String is an object, can be used as a datatype (not primitive)
+- String is an object, can be used as a datatype by making instances of it (not primitive)
 - Refer to [documentation](https://docs.oracle.com/en/java/javase/14/docs/api/java.base/java/lang/String.html) for methods 
 - Strings are enclosed in "double quotes"
 - Strings are compatible with non latin text languages (Japanese, etc.) and Unicode (Emojis, etc.) 
 
 ## Escape Sequences 
-- Use backslask to insert quotes and slashes so Java can read 
+- Use blackslash to insert quotes and slashes so Java can read 
 
 | code | what it does |
 | ---- | ------------ |
@@ -39,7 +39,6 @@ System.out.println(last + ", " + first); // prints "Neti, Lasya"
 | s.split(" ") | string is split into array based on arguement |
 | Integer.parseInt(s) | string is converted into an int |
 
-- Demo
 ```java
 String a = "Lasya";
 System.out.println(a.length()); // prints 5

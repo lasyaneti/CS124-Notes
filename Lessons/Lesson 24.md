@@ -2,7 +2,7 @@
 
 ## This
 - The **this** keyword can be used in object classes to reference the current instance of the class
-- It helps distinguish between parameter and instance variables when they have the same variable name
+- It helps distinguish between argument and instance variables when they have the same variable name
 
 ## Unconventional Use Case for this
 ```java
@@ -17,8 +17,6 @@ public class Course {
 ```
 
 ## Typical Use Case for this
-
-![Visual Representation](https://media.geeksforgeeks.org/wp-content/uploads/Constructor-Chaining-In-Java1.png)
 
 ```java
 public class Course {
@@ -36,6 +34,9 @@ public class Course {
     }
 }
 ```
+
+![Visual](https://media.geeksforgeeks.org/wp-content/uploads/Constructor-Chaining-In-Java1.png)
+
 
 ## Static
 - The **static** keyword allows us to attach properties to the CLASS itself, rather than a specific INSTANCE of that class

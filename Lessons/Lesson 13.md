@@ -3,17 +3,16 @@
 ## Casting
 - Note: int * double = double 
 - Casting happens before calculation 
-- Cannot cast boolean to int, String to int (need to use method), int to String
-- Implicit Casting (no need to cast)
+- **Implicit Casting** (no need to cast)
   - byte -> short -> int -> long -> float -> double
-- Explicit Casting (need to cast)
+- **Explicit Casting** (need to cast)
   - double -> float -> long -> int -> short -> byte 
 
 ```java
-double a = 3; // works and stores the value of 3.0
+double a = 3; // stores the value of 3.0
 
 int b = 3.14; // ERROR - need to cast 
-int c = (int) 3.14; // truncates 3.14 and stores the value of 3 
+int c = (int) 3.14; // truncates and stores the value of 3 
 ```
 
 ## Important Note on Strings

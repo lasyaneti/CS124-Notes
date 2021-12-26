@@ -9,7 +9,7 @@
 - **Runtime errors** are errors that are not caught by the compiler but are brought up at runtime 
 
 ## Assert
-- Use the assert keyword to debug 
+- Use the **assert** keyword to debug 
 - Output message can be added
 ```java
 int i = -1;

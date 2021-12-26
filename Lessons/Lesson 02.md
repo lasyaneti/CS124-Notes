@@ -2,7 +2,7 @@
 
 - Java executes code line by line
 - The variable type must be included in variable declaration
-- Variable type should not be included when changing value of already declared variable, since this indicates declaration
+- Variable type should not be included when changing the value of an already declared variable, since this indicates declaration
 - The value of a variable is called a literal
 
 ``` java 
@@ -20,4 +20,4 @@ x = 1; // Initialize
 - **Boolean**: boolean
   - true/false 
 - **Characters**: char
-  - Enclosed by single quotes like so 'c'
+  - Enclosed by single quotes: 'c'

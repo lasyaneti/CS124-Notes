@@ -6,8 +6,8 @@
 
 ## Method Overloading 
 - There can be multiple functions with the same function name BUT:
-  - Arguements must be different 
-  - Method signature (includes name and arguement) must be different, i.e. just changing the return type or arguement variable name will not work;
+  - Arguments must be different 
+  - Method signature (includes name and arguement) must be different, i.e. just changing the return type or arguement variable name will not work
 - Useful to perform same function with different inputs 
 
 ```java

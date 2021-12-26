@@ -12,7 +12,7 @@
 ## Super
 - Call super() to effectively use parent class' constructors 
 - This call must be the first line in a method, you can only call it once
-- We know that when you create a constructor, the class loses its default constructor with no arguments. So, when a parent class has a constructor, the subclass MUST call super() and pass appripriate arguments because it inherited the parent class' variables which need to be declared. 
+- We know that when you create a constructor, the class loses its default constructor with no arguments. So, when a parent class has a constructor, the subclass MUST call super() and pass appropriate arguments because it inherited the parent class' variables which need to be declared. 
 - Private variables cannot be accesses by subclasses, getter methods must be used to gain access. 
 - The **protected** keyword allows you to share variables with all subclasses that extend the parent class, while keeping it hidden from the rest of the code. This is only relavant in big projects that work with various Objects. 
 

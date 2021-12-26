@@ -5,7 +5,7 @@
 
 | Reference | Object |
 | --------- | ------ |
-| netId | Student |
+| Net ID | Student |
 | Phone Number | Phone |
 | Address | Physical Home |
 

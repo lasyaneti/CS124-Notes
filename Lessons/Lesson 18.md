@@ -23,7 +23,7 @@ map.put("San Francisco", 4);
 // retrieve mapping
 map.get("Chicago");
 map.get("Seattle"); // returns null if key DNE
-map.getOrDefault("Seattle", 0); // handy method to set default value in the case of null
+map.getOrDefault("Seattle", 0); // handy method to set default value in the case of null return
 
 // iterating over a Map
 for (Map.Entry<String, Integer> entry : map.entrySet()) {
@@ -32,10 +32,10 @@ for (Map.Entry<String, Integer> entry : map.entrySet()) {
 }
 ```
 ## Set
-- Sets are unorder collection of distinct elements
+- Sets are unorder collections of distinct elements
 - Items do not have indexes
 - Only unique items are stored in a set
-- Best use if when order does not matter and items must be unique
+- Best use is when order does not matter and items must be unique
 
 ```java
 import java.util.Set;
@@ -44,7 +44,7 @@ Set<Integer> set = new HashSet<>();
 
 // add items
 set.add(1);
-set.add(1); // set still only contains one 1 because it only stores unique valuesSo peSooo
+set.add(1); // set still only contains one 1 because it only stores unique values
 set.add(3);
 System.out.println(set);
 

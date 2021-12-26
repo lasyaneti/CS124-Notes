@@ -1,6 +1,6 @@
 # 09/10/21: null
 
-- null can be tought of as a literal value that is used for objects
+- null can be thought of as a literal value that is used for objects
 - null means the **lack of a reference** for that object
 - Primitive types cannot be set to null; however, arrays of primitive types are still objects so these can be set to null 
 

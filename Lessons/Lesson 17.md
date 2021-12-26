@@ -38,7 +38,7 @@ System.out.println(arr[0]);
 list.set(0, "hello");
 System.out.println(list.get(0));
 
-// ARRAY vs. ARRAYLIST SIZE: list is better
+// ARRAY vs. ARRAYLIST SIZE: list is better since it is mutable
 String[] arr = new String[5];
 System.out.println(arr.length);
 
@@ -60,7 +60,7 @@ System.out.println(list.size()); // now 2
   - double -> Double
   - char -> Character
   - boolean -> Boolean
-- Boxed types can be set to null because they are objects 
+- Boxed items can be set to null because they are objects 
 - Autoboxing is when Java automatically boxes (converts primitive type to object) and unboxes (converts object to primitive type) for you, see below
 ```java
 List<Integer> list = new ArrayList<>();
@@ -73,6 +73,6 @@ System.out.println(list.get(0) + 5);
 ```
 
 ## More on Lists
-- Adding objects of other types to Lists of a defined type will result in imcompatoble types error
+- Adding objects of other types to Lists of a defined type will result in incompatible type error
 - Always provide type parameter for Lists in Java because an undefined type parameter will allow objects of all types and it gets messy
 - [Additional concept](https://youtu.be/aMLRDGKbSgQ) explained by prof. Colleen Lewis

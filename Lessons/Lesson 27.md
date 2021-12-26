@@ -1,7 +1,7 @@
 # 09/29/21: Polymorphism
 - Polymorphism is when a subtype (instance of child class) and can act as its parent object
-- Ex (see below): Dog object can be sent a method that takes an Animal
 - **Tip**: think of extends as "is a"
+- Ex: Dog object can be sent a method that takes an Animal
 
 ```java
 class Pet { }
