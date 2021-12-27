@@ -7,4 +7,5 @@
 
 ## Two Sides to Abstraction Barrier
 | Using | Implementing |
+| ----- | ------------ |
 | You don't need to implement an interface to use a feature that the interface provides. | You KNOW when you are implementing it because you have to use the implements keyword. The question is how do you know when to use the implements keyword? Just because you use Comparable as an object in your class, you do not need to implement it. Unless you want to access and create methods of Comparable. |

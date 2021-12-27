@@ -14,10 +14,8 @@
 - Conceptually, an interface is when **separate components exchange information**, a shared boundary must be agreed upon in order to operate co-dependently 
 - Further, the interface for any class is the methods that it contains - the points of connection AKA how you can interact with the class
 - **Important Note**: 
-    - Interitance for classes is limited because you can only extend one class
-    - Inheritance for interfaces is flexible because you can implement multiple interfaces, BUT:
-      - you must provide a method called simple
-      - documenatation becomes super important to avoid running into errors, the compiler doesn't check for your errors.
+    - Inheritance for classes is limited because you can only extend one class
+    - Inheritance for interfaces is flexible because you can implement multiple interfaces, BUT documenatation becomes super important to avoid running into errors, the compiler doesn't check for your errors.
 
 ```java
 interface Simple {
@@ -39,7 +37,7 @@ public class Simpler extends Parent implements Simple, Second {
 }
 ```
 ## Interfaces vs. Abstract Classes
-- Similar features except one main difference
+Similar features except one main difference:
 - If you design using an abstract class, know that you can only extend one class
 - Interfaces are handy when you want to implement multiple
 

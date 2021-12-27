@@ -28,7 +28,7 @@ System.out.println(student.getType()); // prints "student"
 ## Anonymous Class Rules
 - Have no name
 - Must extend parent class or implement interface
-- INstances are create immediately, no further instances can be created
+- Instances are create immediately, no further instances can be created
 - Cannot provide constructors 
 
 ## Anonymous Classes and Variables
