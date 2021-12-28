@@ -6,8 +6,7 @@
 ## JSON
 - JSON is popularly used in serializing
 - In our MP, we use JSON to pass data from **server** to **client** (which would normally be running on two different machines, communicating over a network)
-- Every JSON object is enclosed in { and }
-- Arrays are enclosed in [ and ]
+- Every JSON object is enclosed in { ... } and arrays are enclosed in [ ... ]
 - Numeric literals are not serialized but everything else must be in quotes 
 
 ## Data Flow in our Andriod Application

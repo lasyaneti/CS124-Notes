@@ -1,39 +1,16 @@
-# 11/18/21: Hashing
+# 11/29/21: Practical Sorting (MP3)
 
-- The hash function (values/codes/digests/hashes) is used to map data of random sizes to fixed values
-- hashCode() depends on reference, unless overriden
+Collections.sort sort an in place sort, i.e. it doesn't return a new list but rather modifies the passed one.
 
-## Features of Hash Functions
-- **Deterministic**: for an input hash value, function must always return the same hash value
-- **Repeatable**: must have the ability to generate the same hash again
-- **Fixed range**: within a certain range of values
-- **Uniform**: prevents collisions
-- Not mandatory, but it is highly reccomended and desirable for a good hash function to take input as evenly as the output range
-
+## One Parameter
 ```java
-// Every Java object has a hashCode method
-System.out.println("test".hashCode());
-System.out.println("testing".hashCode());
-
-// Hash codes of objects with the same values, but different references are different
-Car first = new Car("Ford", 100);
-Car second = new Car("Ford", 100);
-System.out.println(first.hashCode() + " != " + second.hashCode());
-
-// Good hash functions should override the Java object method and write code for the specific type of object
-
-import java.util.Objects;
-
-public class Car {
-    String model;
-    int odometer;
-    @Override
-    public int hashCode() {
-        return Objects.hash(model, odometer);
-    }
-}
+String[] a = {"Bbb", "B", "Aa", "Aaa", "Cc", "Ccc", "A", "Bb", "C"};
+Collections.sort(a);
+// a is now: [A, Aa, Aaa, B, Bb, Bbb, C, Cc, Ccc]
 ```
 
-## Additional Info
-- Files have download verification, which gives you a unique hashcode for unique files, so you can compare that you downloaded what you were shown online, and that your file was not intercepted by hackers, etc.
-- GitHub commits are stored as hashcodes
+## Two Parameters: use lambda as the 2nd argument
+```java
+Collections.sort(a, (s1, s2) -> s1.compareTo(s2));
+// a is now: [A, Aa, Aaa, B, Bb, Bbb, C, Cc, Ccc]
+```

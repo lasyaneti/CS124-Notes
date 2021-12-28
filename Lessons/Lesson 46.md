@@ -6,8 +6,8 @@
 | Root | Node at the top of the tree |
 | Leaf | Node with no children |
 | Subtree | Portion of tree |
-| Level | # of esges from the root to the node |
-| Height/depth | Max levles in a tree | 
+| Level | # of edges from the root to the node |
+| Height/depth | Max levels in a tree | 
 
 ![Visual](/Images/TreeLevels.png)
 

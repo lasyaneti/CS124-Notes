@@ -1,23 +1,48 @@
-# 11/04/21: Graphs
+# 11/05/21: Graph Algorithms
 
-| Word | Meaning |
-| ---- | ------- |
-| Node | Individual item |
-| Edge | Connection between nodes |
-| Neighbor | Another node that your node is connected to |
-| Trail | Path that never hits the same node more than once |
+Graphs don't have a linear order, use getNode() for a random starting point
+```java
+graph.getNode();
+```
 
-## Graph Types
-- Undirected graphs are connected both ways. Directed graphs are not, unless established in both ways
-- All connections are weighted equally in an unweighted graph
-- Graphs can be weakly/strongly connected depending on how easy it is to reach any node from another node in the graph
-- In a connected graph, every node can be reached from every other node
+## Graph Traversal
+Connected graphs can be traversed using a **set to keep track of visisted** and call neighbors recursively to keep exploring other nodes
+```java
+void traverse(GraphNode<Integer> node, Set<GraphNode<Integer>> visited) {
+    // Base case
+    if (visited.contains(node)) {
+        return; 
+    }
+    visited.add(node);
+    // Recurse to visit all neighbors
+    for (GraphNode<Integer> neighbor : node.getNeighbors()) {
+        traverse(neighbor, visited);
+    }
+}
+```
 
-![Visual](/Images/GraphTypes.png)
+## Graph Cycle
 
-## Additional Notes
-- Trees have roots because of their structure, but graphs have no top or order, and thus no root either
-- From a data structure standpoint, trees are a variation of graphs
-- **Trees are simplified graphs**, the main different is that trees have **a single distinct path** from any root to node, but in a graphs, multiple paths exist
-- Iterative logic pairs well with linear data structures since these allows us to start at the parent and work down to the children. **Graphs work best with recursion because all the nodes are just neighbors**
-- When we recurse in trees, we work down from the parent to the children and keep going down that way. This doesn't work for graphs because there is no progression, everything is just neighbors. You need to keep track of what nodes you already visited to ensure your algorithm isn't stuck in an eternal loop. **This can be done using a set.**
+![Visual](/Images/GraphCycle.png)
+
+- In connected graphs, a cycle is a path where you start from node A back to node A by visiting each edge no more than once 
+- **Set cannot be used to write a graph cycle algorithm** because the way we establish this set, it cannot differentiate between the following paths:
+  - node A -> node B -> node C = **cycle**
+  - node A -> node B -> node A -> node B -> node C -> node A = **backtracking**
+- We need a new data structure for this algorithm: create a new list to pass all neighors so each path will independently ensure it's going in a cycle. 
+- Logic: when you are backtracking, the current node is the second to last item in the list vs. in a cycle you take a whole new path so the current node is not the second to last item in the list. Trick is to look at the position of the visited node in the path list.
+
+```java
+boolean hasCycle(GraphNode<Integer> node, List<GraphNode<Integer>> path) {
+  if (path.contains(node)) {
+    return path.indexOf(node) != (path.size() - 2);
+  }
+  path.add(node);
+  for (GraphNode<Integer> neighbor : node.getNeighbors()) {
+    if (hasCycle(neighbor, new ArrayList<>(path))) {
+      return true;
+    }
+  }
+  return false;
+}
+```

@@ -1,46 +1,40 @@
-# 11/11/21: Merge Sort
+# 11/12/21: Quicksort
 
-- Merge merges two arrays that are already sorted individually
+- Partitioning
+  - Pick a pivot
+  - Split into two parts: (1) all items < pivot (2) all items >= pivot
+  - Swap values if they are smaller than pivot, keep updating turtle pivot
 
-![Visual](/Images/MergeSort.png)
+## Quicksort Problem Code & Explaination
+1. Loop through and compare pivot value to partition at last index
+2. Change pivot as you go 
+3. If value at last index is out of place, change the partition 
 
-## Merge Sort Steps
-1. Split using mergeSort
-2. Merge results using merge
-    - Take two sorted arrays
-    - Merge by comparing items at index in both arrays
-    - Copy smaller number into new array (size = sum of both smaller arrays)
-    - Update index
-
-- O(n) because we iterate each element ONCE, n is the size of the big array that combines both smaller arrays
-- Recursively sorting arrays is O(N*log-base 2-(N))
-- When we are given 1 array, we need to split it into a smaller and smaller arrays that are then sorted and return up via recursion
-  - **Base case**: an array with size 1 is naturally sorted
-
-![Visual](/Images/MergeSort2.png)
-
-## Merge Sort Code & Explanation
+**Question: Pick last index as partition, return pivot index**
 ```java
-public class Merger {
-    public static int[] marger(int[] a, int[] b) {
-        if (a == null || b == null) {
+public class Partitioner {
+    public static int partition(int[] values) {
+        if (values == null || values.length == 0) {
             throw new IllegalArgumentException();
         }
-    }
-    int[] c = new int[a.length + b.length];
-    int aIdx = 0;
-    int bIdx = 0;
-    for (int i = 0; i < c.length; i++) {
-        if (bIdx > b.length || (aIdx < a.length && a[aIdx] > b[bIdx])) {
-            c[i] = a[aIdx];
-            aIdx++;
-        } else if (bIdx < b.length) {
-            c[i] = b[bIdx];
-            bIdx++;
+        int pivotValue = values[values.length - 1];
+        int pivotIndex = 0;
+
+        for (int i = 0; i < values.length; i++) {
+            if (values[i] < pivotValue) {
+                int temp = values[i];
+                values[i] = values[pivotIndex];
+                values[pivotIndex] = temp;
+                pivotIndex++;
+            }
         }
+
+        values[values.length - 1] = values[pivotIndex];
+        values[pivotIndex] = pivotValue;
+
+        return pivotIndex;
     }
-    return c;
 }
 ```
 
-![Merge Sort Explained](/Images/MergeSort3.png)
+![Quicksort Explained](/Images/QuickSort.png)

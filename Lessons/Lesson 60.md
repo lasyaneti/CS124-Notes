@@ -1,16 +1,31 @@
-# 11/29/21: Practical Sorting (MP3)
+# 12/02/21: Generics
 
-Collections.sort sort an in place sort, i.e. it doesn't return a new list but rather modifies the passed one.
+- Transforming runtime errors to compiler errors is a good programming practice because it prevents errors during development
+- Generics helps generify all classes, meaning you can pass any object
 
-## One Parameter
+## E
+- Type <E> is a placeholder for any element in Java
+
 ```java
-String[] a = {"Bbb", "B", "Aa", "Aaa", "Cc", "Ccc", "A", "Bb", "C"};
-Collections.sort(a);
-// a is now: [A, Aa, Aaa, B, Bb, Bbb, C, Cc, Ccc]
+public class Example<E> {
+    // This works because E replaces a type for variable value
+    private E value;
+    public Example() {
+        // Cannot reassign a type
+        E = String;
+        // This is also wrong, cannot create like this
+        value = new E();
+    }
+}
 ```
 
-## Two Parameters: use lambda as the 2nd argument
-```java
-Collections.sort(a, (s1, s2) -> s1.compareTo(s2));
-// a is now: [A, Aa, Aaa, B, Bb, Bbb, C, Cc, Ccc]
-```
+- The compiler automatically replaces the type parameter E with types specified in the code
+- The Compiler puts a cast for you automatically **only during compilation**, and then **discards thus information**, i.e. at runtime this information is not avaliable (type erasure)
+- There is only one instance of the list itself, making it efficient
+- If you do not specify type, it uses Object
+- Interfaces can also accept type parameters
+
+## Common Java Naming Conventions for Generic Type Parameters
+| E | <K, V> | N |
+| - | ------ | - |
+| Element in list | Key, Value in map | Number |

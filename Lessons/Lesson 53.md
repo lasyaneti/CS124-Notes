@@ -1,70 +1,46 @@
-# 11/10/21: Sorting Algorithms
+# 11/11/21: Merge Sort
 
-- Analyze sorting algorithms by examining time & space taken
-- Larger dataset = takes longer to sort, we need to optimize how quickly that rate is increasing (exponential, linear, log, etc. change based on increase in dataset)
-- Algorithms we will learn:
-  - Bubble Sort
-  - Insertion sort
-  - Merge Sort
-  - Quicksort 
+- Merge merges two arrays that are already sorted individually
 
-## Bubble Sort
-- Not that efficient, but the most simple and intuitive 
-- Slow because it moves one position at a time
-- You could break out of the loop and end the sorting algorithm using a conditional
-- Cases:
-  - **Best case** is already sorted array: {1, 2, 3}
-  - **Worse case** is when everything is sorted but smallest value is at the end: {1, 2, 3, -1}
+![Visual](/Images/MergeSort.png)
 
-``` java
-static void bubbleSort(int[] values) {
-    if (values == null) {
-        throw new IllegalArgumentException();
-    }
-    for (int i = 0; i < values.length; i++) {
-        boolean swapped = false;
-        int temp;
-        for (int j = 0; j < values.length - 1; j++) {
-            // Make the swap if value is out of place
-            if (values[j + 1] < values[j]) {
-                temp = values[j + 1];
-                values[j + 1] = values[j];
-                values[j] = temp;
-                swapped = true;
-            }
-        }
-        if (!swapped) {
-            break;
-        }
-    }
-}
+## Merge Sort Steps
+1. Split using mergeSort
+2. Merge results using merge
+    - Take two sorted arrays
+    - Merge by comparing items at index in both arrays
+    - Copy smaller number into new array (size = sum of both smaller arrays)
+    - Update index
 
-int[] values = {1, 2, 4, 5, 6, -3, 7, 8, -1};
-bubbleSort(values);
-```
+- O(n) because we iterate each element ONCE, n is the size of the big array that combines both smaller arrays
+- Recursively sorting arrays is O(n*log-base 2-(n))
+- When we are given 1 array, we need to split it into a smaller and smaller arrays that are then sorted and return up via recursion
+  - **Base case**: an array with size 1 is naturally sorted
 
-## Insertion Sort
+![Visual](/Images/MergeSort2.png)
 
-![Visual](/Images/InsertionSort.png)
-
-1. Divides array is a sorted and unsorted part
-2. Keeps the sorted part sorted and accepts one element from the unsorted part to place in the sorted part
-
+## Merge Sort Code & Explanation
 ```java
-public static void insertionSort(int[] arr) {
-    if (arr == null) {
-        throw new IllegalArgumentException();
-    }
-    for (int i = 1; i < arr.length; i++) {
-        int j = i;
-        while (j != 0 && arr[j -1] > arr[j]) {
-            int temp = arr[j];
-            arr[j] = arr[j - 1];
-            arr[j - 1] = temp;
-            j--;
+public class Merger {
+    public static int[] marger(int[] a, int[] b) {
+        if (a == null || b == null) {
+            throw new IllegalArgumentException();
         }
     }
-}    
-int[] values = {1, 2, 4, 5, 6, -3, 7, 8, -1};
-insertionSort(values);
+    int[] c = new int[a.length + b.length];
+    int aIdx = 0;
+    int bIdx = 0;
+    for (int i = 0; i < c.length; i++) {
+        if (bIdx > b.length || (aIdx < a.length && a[aIdx] > b[bIdx])) {
+            c[i] = a[aIdx];
+            aIdx++;
+        } else if (bIdx < b.length) {
+            c[i] = b[bIdx];
+            bIdx++;
+        }
+    }
+    return c;
+}
 ```
+
+![Merge Sort Explained](/Images/MergeSort3.png)

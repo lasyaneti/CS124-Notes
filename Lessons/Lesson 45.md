@@ -10,7 +10,7 @@ The goal is to make the solution so small that it is really obvious to solve. In
 ```java
 boolean isPalindrome(String input) {
     if (input == null) {
-        throw new IllegalArguementException();
+        throw new IllegalArgumentException();
     }
     // Base case
     if (input.length() <= 1) {

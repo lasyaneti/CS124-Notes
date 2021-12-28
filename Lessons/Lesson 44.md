@@ -31,8 +31,10 @@ public class Person {
 
 Person person = new Person("Geoff", 41.2)
 System.out.println(person);
+
 // Jackson triggered here
 ObjectMapper mapper = new ObjectMapper();
+
 // Jackson methods for serializing
 String json = mapper.writeValueAsString(person);
 System.out.println(json);

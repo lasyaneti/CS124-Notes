@@ -1,6 +1,6 @@
 # 10/21/21: Linked Lists
 
-- Instead of indexes, each item has (1) value (2) next that points to the next item in the linked list 
+- Instead of indexes, each item has a **value** and a **next** that points to the next item in the linked list 
 
 ![Visual](/Images/LinkedLists.png)
 
@@ -9,11 +9,11 @@
 ## Linked List methods 
 - get: O(n) because it needs to iterate the whole array
 - set: same as above
-- add: adds a new item by changeing hte pointer from the previous item and adding another connection
+- add: adds a new item by changeing the pointer from the previous item and adding another connection
 - remove: it just changes the pointer by skipping the item at index, doesn't need to iterate the rest of the list after the index
 
 ## Linked List vs. ArrayList
-- The main different is that in a Linked List, each item is aware of its position by using pointers to keep track of what is behind/forward, rather than jsut relying on index 
+- The main different is that in a Linked List, each item is aware of its position by using pointers to keep track of what is behind/forward, rather than just relying on index 
 - ArrayList is fast for get/set
 - Linked List is fast for add/remove
 

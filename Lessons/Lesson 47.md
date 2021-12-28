@@ -16,7 +16,7 @@ boolean searchTree(BinaryTree tree, Object lookingFor) {
         return true;
     }
     // Use or because function return booleann
-    return searchTree(tree.getLeft(), lookingFor) || searchTree(tree.getRight(), lookingFor)
+    return searchTree(tree.getLeft(), lookingFor) || searchTree(tree.getRight(), lookingFor);
 }
 ```
 
